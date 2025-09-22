@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+
   <meta charset="UTF-8">
-  <meta name="author" content="Guilherme">
-  <meta name="description" content="Glossary of key web development terms.">
-  <title>Glossary</title>
-  <link rel="stylesheet" href="style/main.css">
-  <script src="script.js" defer></script>
+  <meta name="author" content="Guilherme Trindade">
+  <meta name="description" content="My personal webpage for HTML and CSS practice, with my favourite hobby and games.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, DnD, Pokemon, Zelda, Baldur's Gate, Edgar Allan Poe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary - Gui's Webpage</title>
+  <script src="script/main.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
   <div class="width-wrap">
+    <header id="top">
+      <nav>
+        <ul>
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="links.html"> Links </a></li>
+          <li><a href="glossary.html"> Glossary </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Found me! -->
+
     <main>
       <h1>Glossary</h1>
       <dl>
@@ -29,6 +50,22 @@
         <dd>An HTML tag that provides metadata about the document, such as author or description.</dd>
       </dl>
     </main>
+
+    <footer id="bottom">
+      <hr>
+      <blockquote>
+        “Deep into that darkness peering, long I stood there, wondering, fearing, <br>
+        doubting, dreaming dreams no mortal ever dared to dream before.”
+      </blockquote>
+      <cite>&mdash; <span class="author">Edgar Allan Poe</span></cite>
+      <p> &copy; 2025 <a
+          href=" mailto:Guilherme.CarvalhoTrindade@saultcollege.ca?subject=Message%20from%20CSD112%20Website">Guilherme
+          Trindade</a>
+      </p>
+    </footer>
+
+    <a href="#top" title="Back to top"></a>
   </div>
 </body>
+
 </html>
