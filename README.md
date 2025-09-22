@@ -13,16 +13,19 @@ To master data analysis and apply it to real-world business challenges—turning
 - Business insights & reporting  
 
 ## 🛠️ Tools & Technologies
-| Language/Tool       | Use Case                        |
-|---------------------|----------------------------------|
-| Python              | Analysis, ML, automation         |
-| SQL                 | Database querying                |
-| Power BI            | Dashboards & reports             |
-| Excel               | Quick stats & manipulation       |
-| Pandas, NumPy       | Data handling in Python          |
-| Matplotlib, Seaborn | Visualization                    |
-| Scikit-learn        | Machine learning                 |
-| Jupyter Notebook    | Interactive coding               |
+- Python  
+- SQL  
+- Power BI  
+- Excel  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+- Jupyter Notebook  
+- Java  
+- HTML  
+- JavaScript  
 
 ## 📁 What You'll Find Here
 - EDA notebooks  
