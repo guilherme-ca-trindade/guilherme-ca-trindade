@@ -1,16 +1,37 @@
 ## Hi there 👋
 
-!--
-**guilherme-ca-trindade/guilherme-ca-trindade** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 👋 Hi, I'm Guilherme Trindade
 
-Here are some ideas to get you started:
+Welcome to my GitHub! I'm currently studying **Computer Programming** at **Sault College**, and my focus is
+**Data Analysis** and **Business Intelligence**, with a strong focus on transforming raw data into actionable insights.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🎯 Goals
+To master data analysis and apply it to real-world business challenges—turning numbers into narratives that drive smart decisions.
+
+## 🧠 Focus Areas
+- Data wrangling & cleaning  
+- Exploratory data analysis (EDA)  
+- Dashboard creation  
+- Business insights & reporting  
+
+## 🛠️ Tools & Technologies
+| Language/Tool       | Use Case                        |
+|---------------------|----------------------------------|
+| Python              | Analysis, ML, automation         |
+| SQL                 | Database querying                |
+| Power BI            | Dashboards & reports             |
+| Excel               | Quick stats & manipulation       |
+| Pandas, NumPy       | Data handling in Python          |
+| Matplotlib, Seaborn | Visualization                    |
+| Scikit-learn        | Machine learning                 |
+| Jupyter Notebook    | Interactive coding               |
+
+## 📁 What You'll Find Here
+- EDA notebooks  
+- Dashboards & visualizations  
+- Business case studies  
+- Machine learning experiments  
+
+---
+
+Thanks for stopping by! Let's connect and explore the data-driven world together.
