@@ -1,6 +1,4 @@
-## Hi there 👋
-
-# 👋 Hi, I'm Guilherme Trindade
+## 👋 Hi, I'm Guilherme Trindade
 
 Welcome to my GitHub! I'm currently studying **Computer Programming** at **Sault College**, and my focus is
 **Data Analysis** and **Business Intelligence**, with a strong focus on transforming raw data into actionable insights.
