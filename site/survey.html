@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Trindade">
+    <meta name="description"
+        content="My personal webpage for HTML and CSS practice, with my favourite hobby and games.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, DnD, Pokemon, Zelda, Baldur's Gate, Edgar Allan Poe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gui's Webpage</title>
+    <script src="script/main.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="width-wrap">
+        <header id="top">
+            <nav>
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="links.html"> Links </a></li>
+                    <li><a href="glossary.html"> Glossary </a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Found me! -->
+
+        <main>
+            <div id="header-contents">
+                <h1>Survey</h1>
+                <form action="https://formspree.io/f/xdkwoqbj" method="post">
+                    <p>
+                        <label for="name_field">What is your name? *</label>
+                        <input type="text" id="name_field" name="name_field" required>
+                    </p>
+                    <p>
+                        <label for="email_field">What is your email? *</label>
+                        <input type="email" id="email_field" name="email_field" required>
+                    </p>
+                    <p>
+                        <label for="best_whole_number">Which whole number is best?</label>
+                        <input type="number" id="best_whole_number" name="best_whole_number" min="1">
+                    </p>
+                    <p>
+                        <label for="best_day">Which day is best?</label>
+                        <input type="date" id="best_day" name="best_day">
+                    </p>
+                    <p>
+                        <label for="best_bear">Which bear is best? *</label>
+                        <select id="best_bear" name="best_bear" required>
+                            <option value="">&nbsp;</option>
+                            <option value="Black">Black</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Care">Care</option>
+                            <option value="Panda">Panda</option>
+                            <option value="Polar">Polar</option>
+                            <option value="Teddy">Teddy</option>
+                        </select>
+                    </p>
+                    <fieldset>
+                        <legend>Do you like radio buttons?</legend>
+                        <ul>
+                            <li>
+                                <label><input type="radio" name="enjoys_radio_buttons" value="yes"> Yes</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="enjoys_radio_buttons" value="no"> No</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="enjoys_radio_buttons" value="?" checked> None of your
+                                    business</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <p>
+                        <label for="life_meaning">What is the meaning of life?</label><br>
+                        <textarea id="life_meaning" name="life_meaning" rows="5" cols="50"
+                            placeholder="Enter the correct answer here"></textarea>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
+            </div>
+        </main>
+
+        <footer id="bottom">
+            <hr>
+            <blockquote>
+                “Deep into that darkness peering, long I stood there, wondering, fearing, <br>
+                doubting, dreaming dreams no mortal ever dared to dream before.”
+            </blockquote>
+            <cite>&mdash; <span class="author">Edgar Allan Poe</span></cite>
+            <p> &copy; 2025 <a
+                    href=" mailto:Guilherme.CarvalhoTrindade@saultcollege.ca?subject=Message%20from%20CSD112%20Website">Guilherme
+                    Trindade</a>
+            </p>
+        </footer>
+
+        <a href="#top" title="Back to top"></a>
+    </div>
+</body>
+
+</html>
