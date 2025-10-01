@@ -1,0 +1,185 @@
+/* part 2 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.width-wrap {
+    max-width: 960px;
+}
+
+.width-wrap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.width-wrap {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.width-wrap {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: none;
+}
+
+.width-wrap {
+    margin-bottom: 3em;
+}
+
+
+footer hr {
+    width: clamp(300px, 50vw, 890px);
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border: none;
+    border-bottom: 3px dotted #cc0000;
+}
+
+
+dt::after {
+    content: ":";
+}
+
+/* part 3 */
+.width-wrap {
+    background-color: #B67272;
+}
+
+body {
+    background-color: #420303;
+}
+
+body {
+    color: #141414;
+}
+
+h1,
+h2,
+h3 {
+    color: #360b0b;
+}
+
+
+a {
+    color: #0077CC;
+}
+
+
+header nav a {
+    color: #0077CC;
+}
+
+::selection {
+    background-color: #FFE4B5;
+    color: #2C2C2C;
+}
+
+/* part 4*/
+header {
+    border-top: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-left: -2em;
+    margin-right: -2em;
+}
+
+header nav {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    list-style: none;
+}
+
+
+header nav ul li a {
+    border-top: 4px solid transparent;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.3s ease;
+}
+
+
+header nav ul li a:hover {
+    border-top-color: #500c0c;
+}
+
+
+header nav ul li a {
+    display: inline-block;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+}
+
+/* part 5 */
+table th,
+table td {
+    padding: 0.3em 1em;
+}
+
+thead th,
+tfoot td,
+tbody th {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+tbody td {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+tbody tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+/* part 6 */
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+
+input[type="radio"]+label,
+input[type="checkbox"]+label {
+    display: inline;
+    margin-left: 0.3em;
+}
+
+
+input[type="submit"],
+button[type="submit"] {
+    border: none;
+    padding: 1em 3em;
+    background-color: #4a0f0f;
+    color: #ebbfbf;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+    background-color: #FFE4E1;
+}
