@@ -51,28 +51,64 @@ dt::after {
     background-color: #B67272;
 }
 
-body {
-    background-color: #420303;
-}
+
 
 body {
+    background-color: #420303;
     color: #141414;
+    font-family: 'Quintessential', cursive;
+    line-height: 1.3;
+
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
     color: #360b0b;
+    font-family: 'Quintessential', cursive;
 }
+
+h1 {
+    background: linear-gradient(to right, #a31101, #360b0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 
 a {
     color: #0077CC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
 header nav a {
     color: #0077CC;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+iframe {
+    border-radius: 2em 0 2em 0;
+}
+
+form ul {
+    padding: 0;
+    list-style: none;
 }
 
 ::selection {
@@ -158,6 +194,37 @@ label {
     margin-bottom: 0.5em;
 }
 
+.bio {
+    column-count: 3;
+    column-gap: 2em;
+}
+
+.bio table {
+    column-span: all;
+    margin-top: 1em;
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+img {
+    max-width: 100%;
+}
+
+#profile {
+    padding: 2%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    font-size: 75%;
+    text-align: center;
+}
+
+footer a {
+    text-shadow: 1px 1px 2px gray;
+    text-decoration: none;
+}
 
 input[type="radio"]+label,
 input[type="checkbox"]+label {
