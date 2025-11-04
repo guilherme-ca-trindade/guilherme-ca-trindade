@@ -119,21 +119,23 @@ form ul {
 /* part 4*/
 header {
     border-top: 4px solid rgba(0, 0, 0, 0.1);
-}
-
-header {
     margin-left: -2em;
     margin-right: -2em;
 }
 
-header nav {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+header ul.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  color: #df3737
 }
 
 header nav {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
     padding-left: 2em;
     padding-right: 2em;
 }
+
 
 header nav ul {
     margin: 0;
@@ -155,7 +157,7 @@ header nav ul li a {
 
 
 header nav ul li a:hover {
-    border-top-color: #500c0c;
+    border-top-color: #ffffff;
 }
 
 
@@ -250,3 +252,115 @@ textarea:invalid,
 select:invalid {
     background-color: #FFE4E1;
 }
+
+.favourites {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.favourites input {
+  display: none;
+}
+
+.favourites label {
+  order: -1;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  background: #f0f0f0;
+  margin-right: 10px;
+}
+
+.favourites label:hover {
+  color: #860a0a;
+}
+
+.favourites input:checked + label {
+  color: white;
+  background: #a24949;
+  border-bottom: 3px solid #5e0f0f;
+}
+
+.favourites label + div {
+  display: none;
+}
+
+.favourites input:checked + label + div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery .row-span-2 {
+  grid-row: span 2;
+}
+
+.gallery .col-span-2 {
+  grid-column: span 2;
+}
+
+.gallery a:hover {
+  transform: scale(1.1);
+}
+
+
+.bio a {
+  display: block;
+  position: relative;
+  width: fit-content; 
+}
+
+.bio a img.selfie {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.paperclip {
+  position: absolute;
+  top: -10px;     
+  right: -10px;
+  width: 20%;
+  background: none;
+  box-shadow: none;
+  pointer-events: none; 
+}
+
+.back-to-top {
+  margin-left: -25px;
+  position: sticky;
+  bottom: 10px;
+  display: inline-block;
+  font-size: 2rem;         
+  color: #b92222;          
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  transform: rotate(45deg);
+  color: #760000;          /* Changes color on hover */
+}
+
+
+
+
+
+

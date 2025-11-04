@@ -18,8 +18,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, DnD, Pokemon, Zelda, Baldur's Gate, Edgar Allan Poe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gui's Webpage</title>
-    <script src="script/main.js"></script>
-    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script>
 
     <style>
         ul.useful-links {
@@ -43,21 +42,23 @@
             clear: both;
         }
     </style>
-
 </head>
 
 <body>
+<header id="top">
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="glossary.html">Glossary</a></li>
+            <li><a href="gallery.html"> Gallery</a></li>
+            <li><a href="links.html"> Links</a></li>
+            <li><a href="survey.html">Survey</a></li>
+        </ul>
+    </nav>
+</header>
+    <a href="#top" class="back-to-top">↑</a>
+
     <div class="width-wrap">
-        <header id="top">
-            <nav>
-                <ul>
-                    <li><a href="index.html"> Home </a></li>
-                    <li><a href="links.html"> Links </a></li>
-                    <li><a href="glossary.html"> Glossary </a></li>
-                    <li><a href="survey.html"> Survey </a></li>
-                </ul>
-            </nav>
-        </header>
         <!-- Found me! -->
 
         <main>
@@ -65,7 +66,13 @@
             <p> Hey there! I'm Guilherme, A curious student about Data Science and Data Analysis. Currently, a student
                 of Computer Programming at Sault College! </p>
             <p> I love playing DnD and games in general, specially Nintendo's classics and RPGs. </p>
+
             <div id="making-a-table" class="bio">
+                <a href="#">
+                    <img src="images/photo-linkedin.jpg" alt="My photo">
+                    <img src="images/paperclip.png" class="paperclip" alt="Paperclip">
+                </a>
+
                 <table>
                     <caption>Table 1. Current Courses</caption>
                     <thead>
@@ -148,30 +155,50 @@
 
             </div>
 
-            <h2> My Favourite Hobby</h2>
-            <a href="https://www.dndbeyond.com">
-                <img src="images/dnd-logo.png" alt="Dungeons and Dragons Logo" title="Dungeons and Dragons Logo"
-                    width="200" height="200">
-            </a>
-            <h3> My Favourites Games</h3>
-            <ol>
-                <li> Pokemon Legends: Arceus </li>
-                <li> Legend of Zelda: Breath of the Wild </li>
-                <li> Baldur's Gate 3</li>
-            </ol>
-            <h3>Haiku </h3>
-            <p>
-                I write, erase, rewrite<br>
-                Erase again, and then<br>
-                A poppy blooms.<br>
-                <cite>by <span class="author">Katsushika Hokusai</span></cite>
-            </p>
+            <h2>My Favourite Hobby</h2>
+            <div class="favourites">
+                <!-- Tab 1: D&D Logo -->
+                <input type="radio" name="tab" id="tab1" checked>
+                <h3><label for="tab1">D&D</label></h3>
+                <div>
+                    <a href="https://www.dndbeyond.com">
+                        <img src="images/dnd-logo.png" alt="Dungeons and Dragons Logo" title="Dungeons and Dragons Logo"
+                            width="200" height="200">
+                    </a>
+                    <p> My favorite hobby is to play Dungeons and Dragons, one of the most popular RPG!</p>
+                </div>
+
+                <!-- Tab 2: Favourite Games -->
+                <input type="radio" name="tab" id="tab2">
+                <h3><label for="tab2">My Favourite Games</label></h3>
+                <div>
+                    <ol>
+                        <li>Pokemon Legends: Arceus</li>
+                        <li>Legend of Zelda: Breath of the Wild</li>
+                        <li>Baldur's Gate 3</li>
+                    </ol>
+                </div>
+
+                <!-- Tab 3: Haiku -->
+                <input type="radio" name="tab" id="tab3">
+                <h3><label for="tab3"> Haiku </label></h3>
+                <div>
+                    <p>
+                        I write, erase, rewrite<br>
+                        Erase again, and then<br>
+                        A poppy blooms.<br>
+                        <cite>by <span class="author">Katsushika Hokusai</span></cite>
+                    </p>
+                </div>
+            </div>
+
 
             <img src="https://loremflickr.com/320/240" style="float: left;" alt="cat picture">
             <img src="https://loremflickr.com/322/242" style="float: right;" alt="cat picture">
         </main>
 
         <footer id="bottom">
+            <a href="#top" class="back-to-top">↑</a>
             <hr>
             <blockquote>
                 “Deep into that darkness peering, long I stood there, wondering, fearing, <br>
