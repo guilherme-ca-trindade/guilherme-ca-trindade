@@ -537,6 +537,131 @@ nav ul.nav-list {
   }
 }
 
+@media (max-width: 700px) {
+  #menu-toggle:checked + .sandwich-icon {
+    border-top-color: transparent;
+  }
+
+  #menu-toggle:checked + .sandwich-icon::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  #menu-toggle:checked + .sandwich-icon::after {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+  .sandwich-icon::before,
+  .sandwich-icon::after {
+    transition: transform 200ms ease, top 200ms ease;
+  }
+}
+
+/* Lab 8 – DOM Dynamically Created Tabs */
+
+/* Appetizer Tab */
+#appetizer {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  min-width: 150px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Order Online Tab */
+#order {
+  padding: 2em;
+  max-width: 500px;
+}
+
+#order form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#order label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+#order input,
+#order textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+#order textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#order button {
+  background-color: #4a0f0f;
+  color: #ebbfbf;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 200ms;
+}
+
+#order button:hover {
+  background-color: #6a1f1f;
+}
+
+/* Food Pictures Gallery Tab */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 2em;
+}
+
+#gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #appetizer {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .menu-item {
+    width: 100%;
+    min-width: unset;
+  }
+
+  #order {
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  #gallery {
+    padding: 1em;
+  }
+}
 
 
 
