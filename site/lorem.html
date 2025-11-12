@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quintessential&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Trindade">
+    <meta name="description"
+        content="My personal webpage for HTML and CSS practice, with my favourite hobby and games.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, DnD, Pokemon, Zelda, Baldur's Gate, Edgar Allan Poe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gui's Webpage</title>
+    <script src="scripts/main.js"></script>
+
+    <style>
+        ul.useful-links {
+            padding: 0;
+        }
+
+        ul.useful-links li {
+            list-style: none;
+            padding-left: 1em;
+            background-image: url('images/link.png');
+            background-size: 10px 10px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        img {
+            margin: 1em;
+        }
+
+        footer {
+            clear: both;
+        }
+
+        @media (max-width: 600px) {
+            .float-left {
+                float: none !important;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .float-right {
+                float: none !important;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="sandwich-icon" aria-label="Open menu"></label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="gallery.html"> Gallery</a></li>
+                <li><a href="links.html"> Links</a></li>
+                <li><a href="survey.html">Survey</a></li>
+                <li><a href="lorem.html">Lorem</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="#top" class="back-to-top">↑</a>
+
+    <div class="width-wrap">
+        <main>
+            <img class="float-left" src="https://loremflickr.com/300/300" alt="Lorem placeholder image" />
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </main>
+
+        <footer id="bottom">
+            <a href="#top" class="back-to-top">↑</a>
+            <hr>
+            <blockquote>
+                "Deep into that darkness peering, long I stood there, wondering, fearing, <br>
+                doubting, dreaming dreams no mortal ever dared to dream before."
+            </blockquote>
+            <cite>&mdash; <span class="author">Edgar Allan Poe</span></cite>
+            <p> &copy; 2025 <a
+                    href=" mailto:Guilherme.CarvalhoTrindade@saultcollege.ca?subject=Message%20from%20CSD112%20Website">Guilherme
+                    Trindade</a>
+            </p>
+        </footer>
+
+        <a href="#top" title="Back to top"></a>
+    </div>
+</body>

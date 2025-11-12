@@ -197,7 +197,7 @@ label {
 }
 
 .bio {
-    column-count: 3;
+    column-width: 13em;
     column-gap: 2em;
 }
 
@@ -210,6 +210,7 @@ label {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 #profile {
@@ -297,7 +298,7 @@ select:invalid {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
 }
 
@@ -316,21 +317,26 @@ select:invalid {
   grid-column: span 2;
 }
 
+.gallery a {
+  transition: transform 200ms;
+}
+
 .gallery a:hover {
   transform: scale(1.1);
 }
 
 
 .bio a {
-  display: block;
+  display: inline-block;
   position: relative;
   width: fit-content; 
 }
 
 .bio a img.selfie {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: auto;
+
 }
 
 .paperclip {
@@ -350,7 +356,7 @@ select:invalid {
   display: inline-block;
   font-size: 2rem;         
   color: #b92222;          
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 200ms;
   text-decoration: none;
 }
 
@@ -358,6 +364,184 @@ select:invalid {
   transform: rotate(45deg);
   color: #760000;          /* Changes color on hover */
 }
+
+@media (max-width: 450px) {
+  .col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .bio table thead,
+  .bio table tfoot,
+  .bio table th {
+    display: none;
+  }
+
+  .bio table td {
+    display: block;
+    padding: 0 1rem;
+  }
+
+  .bio table td:first-of-type {
+    padding-top: 0.3em;
+    font-weight: bold;
+  }
+
+  .bio table td:last-of-type {
+    padding-bottom: 0.3em;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+
+  .bio table td:last-of-type::after {
+    content: " hrs/wk";
+  }
+
+  .bio table caption {
+    caption-side: top;
+  }
+}
+
+.float-left {
+  float: left;
+  margin-right: 1em;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1em;
+}
+
+@media (max-width: 600px) {
+  .float-left {
+    float: none !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .float-right {
+    float: none !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 200ms;
+  }
+
+  nav a {
+    padding-top: 0.5em;
+    border-top: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .favourites {
+    flex-direction: column;
+  }
+
+  .favourites > label {
+    order: 0;
+  }
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* default: hide sandwich icon on wide view */
+.sandwich-icon {
+  display: none;
+}
+
+/* wide screens: ensure nav list is horizontal and visible */
+header nav ul,
+nav ul.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  max-height: none;
+  overflow: visible;
+}
+
+/* responsive behavior at narrow widths */
+@media (max-width: 700px) {
+  /* show sandwich icon */
+  .sandwich-icon {
+    display: block;
+    width: 40px;
+    height: 25px;
+    position: relative;
+    margin: 1em auto;
+    background: none;
+    cursor: pointer;
+  }
+
+  /* three bars using top borders on label and pseudos */
+  .sandwich-icon {
+    border-top: 5px solid #333;
+  }
+  .sandwich-icon::before,
+  .sandwich-icon::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-top: 5px solid #333;
+    position: absolute;
+    left: 0;
+  }
+  .sandwich-icon::before { top: 5px; }
+  .sandwich-icon::after  { top: 15px; }
+
+  /* stack the nav list and hide it by collapsing max-height */
+  header nav ul,
+  nav ul.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;              /* collapsed */
+    overflow: hidden;
+    transition: max-height 200ms ease;
+    width: 100%;
+  }
+
+  /* nav links styling for narrow screens */
+  header nav ul li a,
+  nav ul.nav-list li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75em 0;
+    border-top: none;
+  }
+
+  /* when checkbox is checked expand the menu (use a safe max-height) */
+  #menu-toggle:checked + .sandwich-icon + ul,
+  #menu-toggle:checked + .sandwich-icon + nav ul,
+  #menu-toggle:checked + .sandwich-icon + ul.nav-list {
+    max-height: 500px; /* large enough to show all items; animatable */
+  }
+}
+
+
+
+
+
+
 
 
 
