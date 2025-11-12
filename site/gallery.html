@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quintessential&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Trindade">
+    <meta name="description"
+        content="My personal webpage for HTML and CSS practice, with my favourite hobby and games.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, DnD, Pokemon, Zelda, Baldur's Gate, Edgar Allan Poe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gui's Webpage</title>
+    <script src="scripts/dom-lab8.js" defer></script>
+
+    <style>
+        ul.useful-links {
+            padding: 0;
+        }
+
+        ul.useful-links li {
+            list-style: none;
+            padding-left: 1em;
+            background-image: url('images/link.png');
+            background-size: 10px 10px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        img {
+            margin: 1em;
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="width-wrap">
+        <header id="top">
+            <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="sandwich-icon" aria-label="Open menu"></label>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="gallery.html"> Gallery</a></li>
+                    <li><a href="links.html"> Links</a></li>
+                    <li><a href="survey.html">Survey</a></li>
+                    <li><a href="lorem.html">Lorem</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Found me! -->
+
+      <main>
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <!-- Image 1: 300x600, spans 2 rows -->
+        <a href="https://loremflickr.com/1024/1024/?lock=50" class="row-span-2">
+            <img src="https://loremflickr.com/300/600?lock=50" alt="Gallery image (lock=50)">
+        </a>
+
+    <!-- Images 2–9: standard thumbnails -->
+    <a href="https://loremflickr.com/1024/1024/?lock=51"><img src="https://loremflickr.com/300/300?lock=51" alt="Gallery image (lock=51)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=52"><img src="https://loremflickr.com/300/300?lock=52" alt="Gallery image (lock=52)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=53"><img src="https://loremflickr.com/300/300?lock=53" alt="Gallery image (lock=53)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=54"><img src="https://loremflickr.com/300/300?lock=54" alt="Gallery image (lock=54)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=55"><img src="https://loremflickr.com/300/300?lock=55" alt="Gallery image (lock=55)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=56"><img src="https://loremflickr.com/300/300?lock=56" alt="Gallery image (lock=56)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=57"><img src="https://loremflickr.com/300/300?lock=57" alt="Gallery image (lock=57)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=58"><img src="https://loremflickr.com/300/300?lock=58" alt="Gallery image (lock=58)"></a>
+
+    <!-- Image 10: 600x600, spans 2 rows and 2 columns -->
+        <a href="https://loremflickr.com/1024/1024/?lock=59" class="row-span-2 col-span-2">
+            <img src="https://loremflickr.com/600/600?lock=59" alt="Gallery image (lock=59)">
+        </a>
+
+    <!-- Images 11–15: standard thumbnails -->
+    <a href="https://loremflickr.com/1024/1024/?lock=60"><img src="https://loremflickr.com/300/300?lock=60" alt="Gallery image (lock=60)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=61"><img src="https://loremflickr.com/300/300?lock=61" alt="Gallery image (lock=61)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=62"><img src="https://loremflickr.com/300/300?lock=62" alt="Gallery image (lock=62)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=63"><img src="https://loremflickr.com/300/300?lock=63" alt="Gallery image (lock=63)"></a>
+    <a href="https://loremflickr.com/1024/1024/?lock=64"><img src="https://loremflickr.com/300/300?lock=64" alt="Gallery image (lock=64)"></a>
+  </div>
+</main>
+
+
+
+        <footer id="bottom">
+            <hr>
+            <blockquote>
+                “Deep into that darkness peering, long I stood there, wondering, fearing, <br>
+                doubting, dreaming dreams no mortal ever dared to dream before.”
+            </blockquote>
+            <cite>&mdash; <span class="author">Edgar Allan Poe</span></cite>
+            <p> &copy; 2025 <a
+                    href=" mailto:Guilherme.CarvalhoTrindade@saultcollege.ca?subject=Message%20from%20CSD112%20Website">Guilherme
+                    Trindade</a>
+            </p>
+        </footer>
+
+        <a href="#top" title="Back to top"></a>
+    </div>
+</body>
+
+</html>

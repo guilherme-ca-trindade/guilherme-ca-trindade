@@ -119,21 +119,23 @@ form ul {
 /* part 4*/
 header {
     border-top: 4px solid rgba(0, 0, 0, 0.1);
-}
-
-header {
     margin-left: -2em;
     margin-right: -2em;
 }
 
-header nav {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+header ul.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  color: #df3737
 }
 
 header nav {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
     padding-left: 2em;
     padding-right: 2em;
 }
+
 
 header nav ul {
     margin: 0;
@@ -155,7 +157,7 @@ header nav ul li a {
 
 
 header nav ul li a:hover {
-    border-top-color: #500c0c;
+    border-top-color: #ffffff;
 }
 
 
@@ -195,7 +197,7 @@ label {
 }
 
 .bio {
-    column-count: 3;
+    column-width: 13em;
     column-gap: 2em;
 }
 
@@ -208,6 +210,7 @@ label {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 #profile {
@@ -250,3 +253,391 @@ textarea:invalid,
 select:invalid {
     background-color: #FFE4E1;
 }
+
+.favourites {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.favourites input {
+  display: none;
+}
+
+.favourites label {
+  order: -1;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  background: #f0f0f0;
+  margin-right: 10px;
+}
+
+.favourites label:hover {
+  color: #860a0a;
+}
+
+.favourites input:checked + label {
+  color: white;
+  background: #a24949;
+  border-bottom: 3px solid #5e0f0f;
+}
+
+.favourites label + div {
+  display: none;
+}
+
+.favourites input:checked + label + div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery .row-span-2 {
+  grid-row: span 2;
+}
+
+.gallery .col-span-2 {
+  grid-column: span 2;
+}
+
+.gallery a {
+  transition: transform 200ms;
+}
+
+.gallery a:hover {
+  transform: scale(1.1);
+}
+
+
+.bio a {
+  display: inline-block;
+  position: relative;
+  width: fit-content; 
+}
+
+.bio a img.selfie {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+
+}
+
+.paperclip {
+  position: absolute;
+  top: -10px;     
+  right: -10px;
+  width: 20%;
+  background: none;
+  box-shadow: none;
+  pointer-events: none; 
+}
+
+.back-to-top {
+  margin-left: -25px;
+  position: sticky;
+  bottom: 10px;
+  display: inline-block;
+  font-size: 2rem;         
+  color: #b92222;          
+  transition: transform 200ms;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  transform: rotate(45deg);
+  color: #760000;          /* Changes color on hover */
+}
+
+@media (max-width: 450px) {
+  .col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .bio table thead,
+  .bio table tfoot,
+  .bio table th {
+    display: none;
+  }
+
+  .bio table td {
+    display: block;
+    padding: 0 1rem;
+  }
+
+  .bio table td:first-of-type {
+    padding-top: 0.3em;
+    font-weight: bold;
+  }
+
+  .bio table td:last-of-type {
+    padding-bottom: 0.3em;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+
+  .bio table td:last-of-type::after {
+    content: " hrs/wk";
+  }
+
+  .bio table caption {
+    caption-side: top;
+  }
+}
+
+.float-left {
+  float: left;
+  margin-right: 1em;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1em;
+}
+
+@media (max-width: 600px) {
+  .float-left {
+    float: none !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .float-right {
+    float: none !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 200ms;
+  }
+
+  nav a {
+    padding-top: 0.5em;
+    border-top: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .favourites {
+    flex-direction: column;
+  }
+
+  .favourites > label {
+    order: 0;
+  }
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* sandwich icon - ALWAYS visible */
+.sandwich-icon {
+  display: block;
+  width: 40px;
+  height: 25px;
+  position: relative;
+  margin: 1em auto;
+  background: none;
+  cursor: pointer;
+  border-top: 5px solid #333;
+}
+
+.sandwich-icon::before,
+.sandwich-icon::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-top: 5px solid #333;
+  position: absolute;
+  left: 0;
+}
+
+.sandwich-icon::before { top: 5px; }
+.sandwich-icon::after  { top: 15px; }
+
+/* wide screens: hide nav list by default, show when menu is toggled */
+header nav ul,
+nav ul.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease;
+  width: 100%;
+}
+
+/* when checkbox is checked expand the menu */
+#menu-toggle:checked + .sandwich-icon + ul,
+#menu-toggle:checked + .sandwich-icon + nav ul,
+#menu-toggle:checked + .sandwich-icon + ul.nav-list {
+  max-height: 500px;
+}
+
+/* animation for sandwich to X */
+.sandwich-icon::before,
+.sandwich-icon::after {
+  transition: transform 200ms ease, top 200ms ease;
+}
+
+#menu-toggle:checked + .sandwich-icon {
+  border-top-color: transparent;
+}
+
+#menu-toggle:checked + .sandwich-icon::before {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+#menu-toggle:checked + .sandwich-icon::after {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* Lab 8 – DOM Dynamically Created Tabs */
+
+/* Appetizer Tab */
+#appetizer {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  min-width: 150px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Order Online Tab */
+#order {
+  padding: 2em;
+  max-width: 500px;
+}
+
+#order form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#order label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+#order input,
+#order textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+#order textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#order button {
+  background-color: #4a0f0f;
+  color: #ebbfbf;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 200ms;
+}
+
+#order button:hover {
+  background-color: #6a1f1f;
+}
+
+/* Food Pictures Gallery Tab */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 2em;
+}
+
+#gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #appetizer {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .menu-item {
+    width: 100%;
+    min-width: unset;
+  }
+
+  #order {
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  #gallery {
+    padding: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
