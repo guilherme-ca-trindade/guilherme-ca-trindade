@@ -1,9 +1,11 @@
 // PART 1 – Appetizer Tab
-const nav = document.querySelector("nav");
+const navList = document.querySelector("nav ul.nav-list");
 const appetizerLink = document.createElement("a");
 appetizerLink.textContent = "Appetizer";
 appetizerLink.href = "#appetizer";
-nav.appendChild(appetizerLink);
+const appetizerItem = document.createElement("li");
+appetizerItem.appendChild(appetizerLink);
+navList.appendChild(appetizerItem);
 
 const appetizerTab = document.createElement("div");
 appetizerTab.id = "appetizer";
@@ -17,13 +19,16 @@ appetizerTab.style.gap = "1em";
   appetizerTab.appendChild(div);
 });
 
-document.body.appendChild(appetizerTab);
+const main = document.querySelector("main");
+main.appendChild(appetizerTab);
 
 // PART 2 – Order Online Tab
 const orderLink = document.createElement("a");
 orderLink.textContent = "Order Online";
 orderLink.href = "#order";
-nav.appendChild(orderLink);
+const orderItem = document.createElement("li");
+orderItem.appendChild(orderLink);
+navList.appendChild(orderItem);
 
 const orderTab = document.createElement("div");
 orderTab.id = "order";
@@ -73,13 +78,15 @@ submitButton.textContent = "Submit Order";
 form.appendChild(submitButton);
 
 orderTab.appendChild(form);
-document.body.appendChild(orderTab);
+main.appendChild(orderTab);
 
 // PART 3 – Food Pictures Gallery
 const galleryLink = document.createElement("a");
 galleryLink.textContent = "Food Gallery";
 galleryLink.href = "#gallery";
-nav.appendChild(galleryLink);
+const galleryItem = document.createElement("li");
+galleryItem.appendChild(galleryLink);
+navList.appendChild(galleryItem);
 
 const galleryTab = document.createElement("div");
 galleryTab.id = "gallery";
@@ -98,5 +105,5 @@ images.forEach(imgData => {
   galleryTab.appendChild(img);
 });
 
-document.body.appendChild(galleryTab);
+main.appendChild(galleryTab);
 
